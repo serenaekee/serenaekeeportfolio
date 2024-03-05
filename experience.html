@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/timeline-icon.css">
+    <title>Serenaekee Portfolio Website</title>
+</head>
+<body>
+    <section class="experience" id="experience">
+        <div class="experience-header">
+            <h2 class="heading">My Working Experience</h2>
+        </div>
+        <br><br>
+        <ul class="timeline">
+            <li class="timeline-event">
+              <label class="timeline-event-icon"></label>
+              <div class="timeline-event-copy">
+                <p class="timeline-event-thumbnail">Aug 2023 - Jan 2024 (6 Months)</p>
+                <h3>IT Intern (Mobile Application & ASP.NET Developer)</h3><br>
+                <h4><img src="resource/img/ecoshop-logo.png" alt="" class="ecoshop-logo"> Eco-Shop Marketing Sdn.Bhd.</h4>
+                <p><strong>Job Scopes:</strong></p>
+                <ul>
+                    <li>Contributed to end-to-end API development and backend optimization.</li>
+                    <li>Developed an efficient internal mobile app using Flutter and Dart.</li>
+                    <li>Contributed to the enhancement of internal web application and develop the new function by using ASP.NET and C#.</li>
+                    <li>Collaborated closely with cross-functional teams / stakeholders to integrate and optimize features within the Inventory Management System (IMS).</li>
+                    <li>Resolved technical issues and contributed to R&D initiatives.</li>
+                    <li>Played a key role in the QA process, executing unit tests, participating in testing phases, and upholding application quality standards.</li>
+                    <li>Leveraged MySQL for advanced data analysis and created insightful Grafana dashboards for effective data visualization.</li>
+                </ul>
+                <br>
+                <p><strong>Key Achievements & Exposure:</strong></p>
+                <ul>
+                    <li>Proficient in Flutter, Dart, ASP.NET, C#, Agile methodologies, ASP.NET MVC, RESTful APIs and Microsoft SQL Server.</li>
+                    <li>Experienced in UI/UX design, mobile and web application development, testing frameworks and version control.</li>
+                    <li>Skilled in MySQL for data manipulation and Grafana for data visualization.</li>
+                </ul><br>
+              </div>
+            </li>
+          </ul> 
+    </section>
+</body>
+
+<script>
+    // Send message to parent window with document height
+    function sendHeightToParent() {
+        var height = document.documentElement.scrollHeight;
+        parent.postMessage({ height: height }, '*');
+    }
+
+    // Call sendHeightToParent whenever the content changes
+    window.addEventListener('DOMContentLoaded', sendHeightToParent);
+    window.addEventListener('resize', sendHeightToParent);
+</script>
+</html>

@@ -11,5 +11,6 @@
     --text-color: #fff;
     --text-color-content: black;
     --main-color: #ffc5d4;
-    --content-bg-color: #fcf1f9;
+    --content-bg-color: #fff;
+    /* --content-bg-color: #fcf1f9; */
 }

@@ -82,8 +82,9 @@
     }
 
     .about-img img {
-        width: 100vw;
-        margin-top: 4rem;
+        display: none;
+        /* width: 100vw;
+        margin-top: 4rem; */
     }
 }
 

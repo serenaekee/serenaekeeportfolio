@@ -68,7 +68,8 @@
     }
 
     .about-img img {
-        width: 90vw;
+        width: 12rem !important;
+        height: 25rem !important;
         margin-top: 4rem;
     }
 }

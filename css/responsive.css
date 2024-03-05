@@ -63,6 +63,10 @@
         margin-top: 6rem;
     }
 
+
+    /*======================================================
+                          About Me
+    ======================================================*/
     .about {
         flex-direction: column;
     }
@@ -73,6 +77,22 @@
         height: 25rem !important;
         margin-top: 4rem; */
     }
+
+    .about-content h2 {
+        text-align: left;
+        line-height: 1;
+    }
+    
+    .about-content h3 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    
+    .about-content p {
+        font-size: 1rem;
+        margin: 1rem 0 1.5rem;
+        justify-content: right;
+    }
 }
 
 @media (max-width: 617px) {
@@ -81,10 +101,29 @@
         margin-top: 8rem;
     }
 
+    /*======================================================
+                          About Me
+    ======================================================*/
     .about-img img {
         display: none;
         /* width: 100vw;
         margin-top: 4rem; */
+    }
+
+    .about-content h2 {
+        text-align: left;
+        line-height: 1;
+    }
+    
+    .about-content h3 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    
+    .about-content p {
+        font-size: 1rem;
+        margin: 1rem 0 1.5rem;
+        justify-content: right;
     }
 }
 

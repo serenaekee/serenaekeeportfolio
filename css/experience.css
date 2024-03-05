@@ -1,0 +1,48 @@
+@import url('themecolour.css');
+@import url('responsive.css');
+
+* {
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "DM Sans", sans-serif;
+}
+
+html {
+    font-size: 60%;
+}
+
+section {
+    /* min-height: 70vh; */
+    padding: 3rem 8% 3rem;
+}
+
+span {
+    color: var(--bg-color);
+}
+
+.experience {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--content-bg-color);
+}
+
+.experience-header {
+    text-align: center;
+}
+
+.heading {
+    margin-top: 1rem;
+    font-size: 4.5rem;
+}
+
+.timeline-event-copy .ecoshop-logo {
+    height: 6rem;
+    width: 12rem;
+}

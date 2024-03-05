@@ -1,0 +1,15 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Eczar:wght@400..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+:root{
+    
+    --bg-color: #181157;
+    --bg-color-light: #8982cc;
+    --snd-bg-color: #fdeef2;
+    --text-color: #fff;
+    --text-color-content: black;
+    --main-color: #ffc5d4;
+    --content-bg-color: #fcf1f9;
+}

@@ -43,7 +43,7 @@
             <a href="https://github.com/serenaekee" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="mailto:eekee00@gmail.com"><i class="fa-regular fa-envelope"></i></a>
         </div>
-        <a href="resource/resume/resume.pdf" target="_blank" class="btn">Download CV</a>
+        <a href="resource/resume/Tee Ee Kee_Resume.pdf" target="_blank" class="btn">Download CV</a>
     </div>
 </section>
 
@@ -68,61 +68,62 @@ var iframe = document.getElementById("iframe-content");
 
 var previousWidth = window.innerWidth;
 
-if(true) {
     // Function to set the iframe souce, scroll to top & store the active tag in sessionStorage
-    function setIframeSrc(src, newText) {
-        iframe.src = src;
-        iframe.contentWindow.scrollTo(0,0);
-        window.scrollTo(0,0);
-        sessionStorage.setItem("activeTag", src);
-        window.location.reload(); // Refresh the parent page
-        refreshIframe(); 
-    }
+function setIframeSrc(src, newText) {
+    iframe.src = src;
+    sessionStorage.setItem("activeTag", src);
+    setTimeout(function() {
+        iframe.contentWindow.scrollTo(0,0); // Scroll to top of iframe content
+        window.scrollTo(0,0); // Scroll to top of parent window
+    }, 100); // Adjust delay as needed
+    refreshIframe();
+}
 
-    // Function to set the active class on corresponding link
-    function setActiveLink(activeTag) {
-        var links = document.querySelectorAll("nav .menu-container a");
-        links.forEach(function(link) {
-            if (link.getAttribute("onclick".includes(activeTag))) {
-                link.classList.add("active");
-            } else {
-                link.classList.remove("active");
-            }
-        });
-    }
-
-    function refreshIframe() {
-        iframe.contentWindow.location.reload();
-    }
-
-    iframe.onload = function() {
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 50 + "px";
-    }
-
-    // Retrieve the active tag from sessionStorage
-    var activeTag = sessionStorage.getItem("activeTag");
-
-    if (activeTag) {
-        // Set iframe souce to corresponding page
-        iframe.src = activeTag;
-
-        setActiveLink(activeTag);
-    }
-
-    // Add event listener to save active tag before refreshing
-    window.addEventListener("beforeunload", function() {
-        sessionStorage.setItem("activeTag", iframe.src);
-    });
-
-    // Add event listener to check for window resize & refresh iframe if width changes
-    window.addEventListener("resize", function() {
-        var currentWidth = window.innerWidth;
-        if (currentWidth !== previousWidth) {
-            refreshIframe();
-            previousWidth = currentWidth;
+// Function to set the active class on corresponding link
+function setActiveLink(activeTag) {
+    var links = document.querySelectorAll("nav .menu-container a");
+    links.forEach(function(link) {
+        if (link.getAttribute("onclick".includes(activeTag))) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
         }
     });
 }
+
+function refreshIframe() {
+    setTimeout(function() {
+        adjustIframeHeight(iframe);
+    }, 100); // Delay to ensure content is loaded before adjusting height
+}
+
+iframe.onload = function() {
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 50 + "px";
+}
+
+// Retrieve the active tag from sessionStorage
+var activeTag = sessionStorage.getItem("activeTag");
+
+if (activeTag) {
+    // Set iframe souce to corresponding page
+    iframe.src = activeTag;
+
+    setActiveLink(activeTag);
+}
+
+// Add event listener to save active tag before refreshing
+window.addEventListener("beforeunload", function() {
+    sessionStorage.setItem("activeTag", iframe.src);
+});
+
+// Add event listener to check for window resize & refresh iframe if width changes
+window.addEventListener("resize", function() {
+    var currentWidth = window.innerWidth;
+    if (currentWidth !== previousWidth) {
+        refreshIframe();
+        previousWidth = currentWidth;
+    }
+});
 
 function adjustIframeHeight(iframe) {
     // Retrieve iframe's content window
@@ -144,30 +145,29 @@ window.addEventListener('message', function(event) {
 
 /*************Function to animate the text****************/
 function animateText(element) {
-        var text = element.innerText;
-        var length = text.length;
-        var counter = 0;
-        var isAppearing = true;
+    var text = element.innerText;
+    var length = text.length;
+    var counter = 0;
+    var isAppearing = true;
 
-        setInterval(function() {
-            if (isAppearing) {
-                if (counter < length) {
-                    element.innerText = text.slice(0, counter + 1);
-                    counter++;
-                } else {
-                    isAppearing = false;
-                }
+    setInterval(function() {
+        if (isAppearing) {
+            if (counter < length) {
+                element.innerText = text.slice(0, counter + 1);
+                counter++;
             } else {
-                if (counter > 0) {
-                    element.innerText = text.slice(0, counter - 1);
-                    counter--;
-                } else {
-                    isAppearing = true;
-                }
+                isAppearing = false;
             }
-        }, 100);
-    }
-
+        } else {
+            if (counter > 0) {
+                element.innerText = text.slice(0, counter - 1);
+                counter--;
+            } else {
+                    isAppearing = true;
+            }
+        }
+    }, 100);
+}
 // Call the function with the desired element
 animateText(document.getElementById('animated-word'));
 </script>

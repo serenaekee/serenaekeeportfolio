@@ -41,3 +41,21 @@ span {
     margin-top: 1rem;
     font-size: 4.5rem;
 }
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--bg-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--bg-color-light);
+    font-size: 1.6rem;
+    color: var(--text-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+    color: var(--main-color);
+}

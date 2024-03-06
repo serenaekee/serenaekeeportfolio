@@ -89,6 +89,14 @@ span {
     margin: auto;
 }
 
+.row .col-md-12 {
+    padding: 1.5em;
+}
+
+.row .col-md-6 {
+    padding: 1.5em;
+}
+
 .card {
     border-radius: 5em;
     box-shadow: 0 0 1rem var(--main-color);
